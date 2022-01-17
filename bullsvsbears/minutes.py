@@ -21,7 +21,7 @@ try:
     historicalPriceData = stock.history(start=startDate, end=endDate, interval="1m")
     price = historicalPriceData["Open"]
 
-    time = list(range(1, 392))
+    time = list(range(1, 391))
 
     data = {
         "time": time,
@@ -30,8 +30,6 @@ try:
 
     df = pd.DataFrame(data)
 
-    print(df)
-
     df.plot(x = 'time', y = 'prices', title = "$" + symbol)
 
     graph = plt.show()
@@ -39,7 +37,3 @@ try:
     print(graph)
 except:
     print("Invalid date")
-
-
-
-    
