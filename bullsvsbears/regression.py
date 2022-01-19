@@ -7,13 +7,19 @@ from sklearn.linear_model import LinearRegression
 # get data and prepare for conversion 
 print("Equity: ")
 symbol = input()
+#print("Start date: ")
+#startDate = input()
+#print("End Date: ")
+#endDate = input()
 
 stock = yf.Ticker(symbol)
 
 historicalPriceData = stock.history(start='2022-01-13', end='2022-01-14', interval="1m")
 listOfPrices = historicalPriceData["Open"]
 
-listOfTimes = list(range(1, 391))
+numDays = len(historicalPriceData) + 1
+
+listOfTimes = list(range(1, numDays))
 
 # performing the regression
 time = np.array(listOfTimes).reshape(-1,1)
