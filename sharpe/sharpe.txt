@@ -1,0 +1,5 @@
+One way to approach building an optimal portfolio is by using the Sharpe Ratio.
+The Sharpe ratio essentially strives to construct a portfolio in a such a way that maximizes returns while minimizing risk.
+By using the Monte Carlo Simulation, we random check different allocations and see which one has the best Sharpe ratio.
+A portfolio that takes too much risk has the potential for large losses.
+A portfolio that takes too little risk is not likely to meet the expected investment objectives.
